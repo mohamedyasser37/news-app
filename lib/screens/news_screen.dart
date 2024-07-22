@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/search_screen.dart';
+import 'package:news_app/screens/search_screen.dart';
 
-import 'cubit/news_cubit.dart';
+import '../cubit/news_cubit.dart';
 
 class NewsScreen extends StatelessWidget {
   const NewsScreen({super.key});

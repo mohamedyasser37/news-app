@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/widgets/news_list_view.dart';
 
-import 'cubit/news_cubit.dart';
+import '../cubit/news_cubit.dart';
 
-class ScienceScreen extends StatelessWidget {
-  const ScienceScreen({super.key});
+class BusinessScreen extends StatelessWidget {
+  const BusinessScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class ScienceScreen extends StatelessWidget {
         // TODO: implement listener
       },
       builder: (context, state) {
-        var list = NewsCubit.get(context).science;
+        var list = NewsCubit.get(context).business;
         return list.isEmpty ? const Center(child: CircularProgressIndicator()) : NewsListView(articles: list);
       },
     );

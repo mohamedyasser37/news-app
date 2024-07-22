@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'cubit/cache_helper.dart';
+import 'helpers/cache_helper.dart';
 import 'cubit/news_cubit.dart';
-import 'dio_helper.dart';
-import 'news_screen.dart';
+import 'helpers/dio_helper.dart';
+import 'screens/news_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

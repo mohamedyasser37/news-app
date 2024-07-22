@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/business_screen.dart';
-import 'package:news_app/dio_helper.dart';
+import 'package:news_app/screens/business_screen.dart';
+import 'package:news_app/helpers/dio_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../science_screen.dart';
-import '../sports_screen.dart';
-import 'cache_helper.dart';
+import '../screens/science_screen.dart';
+import '../screens/sports_screen.dart';
+import '../helpers/cache_helper.dart';
 
 part 'news_state.dart';
 
