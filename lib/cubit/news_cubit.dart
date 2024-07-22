@@ -1,7 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:news_app/business_screen.dart';
 import 'package:news_app/dio_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -49,7 +47,6 @@ class NewsCubit extends Cubit<NewsState> {
       business = value.data['articles'];
       emit(NewsGetBusinessSuccessState());
     }).catchError((error) {
-      print(error.toString());
       emit(NewsGetBusinessErrorState(error.toString()));
     });
   }
@@ -64,7 +61,6 @@ class NewsCubit extends Cubit<NewsState> {
       sports = value.data['articles'];
       emit(NewsGetSportsSuccessState());
     }).catchError((error) {
-      print(error.toString());
       emit(NewsGetSportsErrorState(error.toString()));
     });
   }
@@ -80,7 +76,6 @@ class NewsCubit extends Cubit<NewsState> {
 
       emit(NewsGetScienceSuccessState());
     }).catchError((error) {
-      print(error.toString());
       emit(NewsGetScienceErrorState(error.toString()));
     });
   }
@@ -89,13 +84,12 @@ class NewsCubit extends Cubit<NewsState> {
     emit(NewsGetSearchLoadingState());
 
     DioHelper.getData(url: 'v2/everything', query: {
-      'q': '$value',
+      'q': value,
       'apiKey': 'b76e8a5b36cc4ea88abee249d15a7cad'
     }).then((value) {
       search = value.data['articles'];
       emit(NewsGetSearchSuccessState());
     }).catchError((error) {
-      print(error.toString());
       emit(NewsGetSearchErrorState(error.toString()));
     });
   }

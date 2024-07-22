@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'news_item.dart';
 
 class NewsListView extends StatelessWidget {
-   NewsListView({super.key, required  this.articles});
+   const NewsListView({super.key, required  this.articles});
 
   final List articles ;
   @override
